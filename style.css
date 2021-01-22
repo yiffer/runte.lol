@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: center;
+    min-height: 100vh;
+    margin: 0;
+    height: 100%;
+    background-color: #b44b00;
+    overflow: hidden;
+    align-items: center;
+    background-image: url("assets/fox.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fixed-box-div-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    align-items: center;
+    height: 12%;
+    background: #023A81;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.text-galaxy-linear {
+    margin: 0px;
+    position: relative;
+    font-family: Roboto;
+    font-size: 54px;
+    color: #fff;
+    text-align: center;
+}
+
+.text-white-linear {
+    margin: 0px;
+    position: relative;
+    font-family: Roboto;
+    font-size: 54px;
+    color: #ff0000;
+    text-align: center;
+}
+
+.button {
+    position: relative;
+    padding: 12px 36px;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 26px;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    background: #242424;
+    overflow: hidden;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+span {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripple 1.2s normal;
+}
+
+@keyframes ripple {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.2;
+    }
+
+    100% {
+        width: 600px;
+        height: 600px;
+        opacity: 0;
+    }
+}
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+  display: none;
+}
