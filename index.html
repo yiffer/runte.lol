@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>runte - generic furry</title>
+    <meta name="title" content="runte - generic furry" />
+    <meta
+      name="description"
+      content="will probably send you horse porn in dms"
+    />
+
+    <!-- fb -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://runte.live/" />
+    <meta property="og:title" content="runte - generic furry" />
+    <meta
+      property="og:description"
+      content="will probably send you horse porn in dms"
+    />
+    <meta property="og:image" content="/yes.jpg" />
+
+    <!-- twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://runte.live/" />
+    <meta property="twitter:title" content="runte - generic furry" />
+    <meta
+      property="twitter:description"
+      content="will probably send you horse porn in dms"
+    />
+    <meta property="twitter:image" content="yes.jpg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body class="bg-black">
+    <div class="relative overflow-hidden w-screen h-screen">
+      <div class="">
+        <div
+          aria-hidden="true"
+          class="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-black to-gray-800 opacity-75"
+        ></div>
+
+        <div id="stars"></div>
+
+        <div id="stars2"></div>
+
+        <div id="stars3"></div>
+
+        <div id="stars4"></div>
+      </div>
+      <div
+        class="absolute top-0 left-50 flex flex-col items-center w-screen h-screen"
+      >
+        <img src="fox.png" alt="" class="h-64 w-auto mt-16 animate-pulse" />
+        <h1 class="text-4xl text-white font-bold mt-6">runte</h1>
+        <div
+          class="flex mt-4 mx-4 flex-col sm:flex-row items-center justify-center w-screen"
+        >
+          <button
+            id="contact"
+            class="inline-flex justify-center items-center transition duration-600 ease-in-out w-2/3 sm:w-auto px-3.5 py-3 sm:py-2 my-2 mx-1 border border-transparent text-lg sm:text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-gray-800 hover:bg-gray-700 focus:outline-none"
+          >
+            Contact me!
+          </button>
+
+          <a
+            href=""
+            type="button"
+            class="inline-flex justify-center items-center transition duration-600 ease-in-out w-2/3 sm:w-auto px-3.5 py-3 sm:py-2 my-2 mx-1 border border-transparent text-lg sm:text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-gray-800 hover:bg-gray-700 focus:outline-none"
+          >
+            Discord server
+          </a>
+
+          <a
+            href=""
+            type="button"
+            class="inline-flex justify-center items-center transition duration-600 ease-in-out w-2/3 sm:w-auto px-3.5 py-3 sm:py-2 my-2 mx-1 border border-transparent text-lg sm:text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-gray-800 hover:bg-gray-700 focus:outline-none"
+          >
+            V3rmillion
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="backdrop"
+      class="hidden fixed z-10 inset-0 overflow-y-auto transition duration-600 ease-in-out"
+    >
+      <div
+        class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+      >
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+          <div class="absolute inset-0 bg-black opacity-25"></div>
+        </div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span
+          class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          aria-hidden="true"
+          >&#8203;</span
+        >
+
+        <div
+          id="modal"
+          class="inline-block align-bottom bg-gray-900 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6"
+        >
+          <div
+            class="flex flex-row flex-shrink justify-center items-center w-full"
+          >
+            <div class="m-4">
+              <a href="https://t.me/runte">
+                <img src="telegram.png" alt="" class="h-32 w-32" />
+                <h1 class="text-xl font-medium text-white text-center mt-2">
+                  Telegram
+                </h1>
+              </a>
+            </div>
+            <div class="m-4">
+              <a href="https://discord.com/users/478742997949874176">
+                <img src="discord.png" alt="" class="h-32 w-32" />
+                <h1 class="text-xl font-medium text-white text-center mt-2">
+                  Discord
+                </h1>
+              </a>
+            </div>
+          </div>
+          <div class="mt-5 sm:mt-6">
+            <button
+              id="close"
+              type="button"
+              class="inline-flex justify-center transition duration-600 ease-in-out w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-800 text-base font-medium text-white hover:bg-gray-700 focus:outline-none sm:text-sm"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const toggleModal = () => {
+        let modal = document.querySelector("#modal");
+        let backdrop = document.querySelector("#backdrop");
+
+        let hidden = backdrop.classList.contains("hidden");
+
+        if (hidden) {
+          modal.classList.add("animate-modal-in");
+          modal.classList.remove("hidden");
+          backdrop.classList.remove("hidden");
+        } else {
+          modal.classList.add("animate-modal-out");
+          setTimeout(() => {
+            modal.classList.add("hidden");
+            backdrop.classList.add("hidden");
+            modal.classList.remove("animate-modal-out");
+          }, 1000);
+        }
+      };
+
+      let close = document.querySelector("#close");
+      let contact = document.querySelector("#contact");
+
+      close.addEventListener("click", toggleModal);
+      contact.addEventListener("click", toggleModal);
+    </script>
+  </body>
+</html>
