@@ -1,2 +1,2 @@
 # yiffer.github.io
-source code for my website
+source code for my (garbage) website
